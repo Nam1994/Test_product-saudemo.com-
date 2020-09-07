@@ -36,7 +36,6 @@ class HerokuAppLogin3(BaseTest):
         time.sleep(2)
         cart_page.click_checkout()
         checkout_step_one_page = CheckoutStepOne(self.driver)
-        checkout_step_one_page.click_continute()
         checkout_step_one_page.click_cancel_button()
         time.sleep(3)
 
