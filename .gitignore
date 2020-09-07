@@ -1,0 +1,7 @@
+venv/
+.idea/
+Utils/__pycache__/__init__.cpython-37.pyc
+Utils/__pycache__/HTMLTestRunner.cpython-37.pyc
+TestData/__pycache__/__init__.cpython-37.pyc
+TestData/__pycache__/TestData.cpython-37.pyc
+*.pyc
