@@ -1,4 +1,5 @@
 import sys
+
 sys.path.append(".")
 import unittest
 from Pages.login_page import LoginPage
@@ -8,6 +9,7 @@ from TestCases.base_test import BaseTest
 from TestData.TestData import TestData
 import time
 
+
 class HerokuAppLogin4(BaseTest):
     """A sample test class to show how page object works"""
 
@@ -16,7 +18,7 @@ class HerokuAppLogin4(BaseTest):
 
     @classmethod
     def tearDown(self):
-         super().tearDown()
+        super().tearDown()
 
     def test_login_successfully(self):
         login_page = LoginPage(self.driver)
@@ -31,6 +33,7 @@ class HerokuAppLogin4(BaseTest):
         cart_page.shopping_button()
         product_page.add_product_to_cart(4)
         time.sleep(2)
+
 
 if __name__ == "__main__":
     unittest.main()

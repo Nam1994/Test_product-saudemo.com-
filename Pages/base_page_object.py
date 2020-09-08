@@ -3,10 +3,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 import logging
-import  random
+import random
+
 
 class BasePage(object):
-    
+
     # this function is called every time a new object of the base class is created.
     def __init__(self, driver):
         self.driver = driver
@@ -20,9 +21,8 @@ class BasePage(object):
 
     # this function performs click on web element whose locator is passed to it.
     def click(self, by_locator):
-
-        #message = "Click on the element with locator '{}'"
-        #logging.info(message.format(','.join(by_locator)))
+        # message = "Click on the element with locator '{}'"
+        # logging.info(message.format(','.join(by_locator)))
 
         WebDriverWait(self.driver, self.timeout).until(EC.visibility_of_element_located(by_locator)).click()
 
@@ -84,8 +84,4 @@ class BasePage(object):
 
         return element.text
 
-
-
     # this function asserts comparison of a web element's text with passed in text.
-
-

@@ -1,4 +1,5 @@
 import sys
+
 sys.path.append(".")
 import unittest
 from selenium import webdriver
@@ -13,6 +14,7 @@ import time
 
 class HerokuAppLogin3(BaseTest):
     """A sample test class to show how page object works"""
+
     @classmethod
     def setUp(self):
         super().setUp(TestData.BROWSER)
@@ -38,6 +40,7 @@ class HerokuAppLogin3(BaseTest):
         checkout_step_one_page = CheckoutStepOne(self.driver)
         checkout_step_one_page.click_cancel_button()
         time.sleep(3)
+
 
 if __name__ == "__main__":
     unittest.main()

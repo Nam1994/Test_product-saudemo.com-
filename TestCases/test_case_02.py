@@ -1,4 +1,5 @@
 import sys
+
 sys.path.append(".")
 import unittest
 from selenium import webdriver
@@ -11,15 +12,17 @@ from TestCases.base_test import BaseTest
 from TestData.TestData import TestData
 import time
 
+
 class HerokuAppLogin2(BaseTest):
     """A sample test class to show how page object works"""
+
     @classmethod
     def setUp(self):
         super().setUp(TestData.BROWSER)
 
     @classmethod
     def tearDown(self):
-         super().tearDown()
+        super().tearDown()
 
     def test_login_successfully(self):
         login_page = LoginPage(self.driver)
@@ -40,6 +43,7 @@ class HerokuAppLogin2(BaseTest):
         checkout_step_two_page = CheckoutStepTwo(self.driver)
         checkout_step_two_page.click_finish_button()
         time.sleep(3)
+
 
 if __name__ == "__main__":
     unittest.main()

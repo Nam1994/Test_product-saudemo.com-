@@ -5,13 +5,13 @@ from selenium import webdriver
 from TestData.TestData import TestData
 sys.path.append(".")
 
-#Base Class for the tests
+# Base Class for the tests
 class BaseTest(unittest.TestCase):
 
     @classmethod
     def setUp(self, browser):
         # Setting up how we want Chrome to run
-        #browser = self.get_browser()
+        # browser = self.get_browser()
         self.driver = self.startBrowser(browser)
         self.driver.maximize_window()
 
@@ -24,19 +24,19 @@ class BaseTest(unittest.TestCase):
         except Exception as e:
             pass
 
-    def startBrowser(name = "chrome"):
+    def startBrowser(name="chrome"):
         """
         browsers，"firefox"、"chrome"、"ie"、"phantomjs"
         """
         try:
             if name.lower() == "firefox" or name.lower() == "ff":
                 print("start browser name :Firefox")
-                #return webdriver.Firefox(executable_path='')
+                # return webdriver.Firefox(executable_path='')
                 return webdriver.Firefox()
             elif name.lower() == "chrome":
                 print("start browser name :Chrome")
                 return webdriver.Chrome(r"C:\Users\Admin\Desktop\Automation TESTER\baitest\drivers\chromedriver.exe")
-                #return webdriver.Chrome()
+                # return webdriver.Chrome()
             elif name.lower() == "edge":
                 print("start browser name :Edge")
                 return webdriver.MicrosoftEdge()

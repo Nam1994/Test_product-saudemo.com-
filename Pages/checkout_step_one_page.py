@@ -3,6 +3,7 @@ from Locators.locators import CheckoutStepOneLocators
 from TestData.TestData import TestData
 import logging
 
+
 class CheckoutStepOne(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
@@ -33,4 +34,4 @@ class CheckoutStepOne(BasePage):
 
     def click_cancel_button(self):
         logging.info("finish button")
-        self.click(CheckoutStepOneLocators.CANCEL_BUTTON_1)
+        self.click(CheckoutStepOneLocators.CANCEL_BUTTON)
