@@ -9,6 +9,7 @@ class LoginPageLocators(object):
 
 class ProductLocators(object):
     ICON_BAGE = (By.XPATH, "//*[@class='shopping_cart_container']")
+    LABEL_PRODUCT = (By.XPATH, "//div[@class='product_label']")
 
     def ADD_TO_CART_BUTTON(index):
         x = "//div[@class='inventory_list']/div[@class='inventory_item']["
